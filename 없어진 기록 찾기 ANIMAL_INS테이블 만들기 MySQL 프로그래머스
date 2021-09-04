@@ -1,0 +1,8 @@
+CREATE TABLE ANIMAL_INS (
+ANIMAL_ID char(20) not null;
+ANIMAL_TYPE char(20) not null;
+DATETIME datetime not null;
+INTAKE_CONDITION char(20) not null;
+NAME char(20) null;
+SEX_UPON_INTAKE char(20) not null;
+primary key (ANIMAL_ID));//ANIMAL_INS 테이블의 기본키
