@@ -1,6 +1,6 @@
 SELECT hour, COUNT(hour) 
 FROM (SELECT to_char(DATETIME, 'hh24') as hour 
-FROM ANIMAL_OUTS) 
+FROM ANIMAL_OUTS)//to_char함수를 통해 시간을 나타내는 형태를 00-24로 나타냄
 WHERE hour >= 9 and hour <= 19 
 GROUP BY hour 
 ORDER BY hour
