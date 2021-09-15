@@ -1,0 +1,6 @@
+SELECT hour, COUNT(hour) 
+FROM (SELECT to_char(DATETIME, 'hh24') as hour 
+FROM ANIMAL_OUTS) 
+WHERE hour >= 9 and hour <= 19 
+GROUP BY hour 
+ORDER BY hour
