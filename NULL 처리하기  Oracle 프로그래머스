@@ -1,0 +1,3 @@
+SELECT ANIMAL_TYPE, NVL(NAME, 'No name')//NVL함수는 어느 필드가 NULL일때 어떻게 처리할지 처리해주는 함수, SEX_UPON_INTAKE 
+FROM ANIMAL_INS 
+ORDER BY ANIMAL_ID 
