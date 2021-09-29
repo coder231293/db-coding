@@ -1,0 +1,7 @@
+SELECT FOLDERID, ( SUBSTR(SYS_CONNECT_BY_PATH(name, ' > '), 4) || NVL(CREATEDATE, ' > YY.MM'), '')) as 결과
+FROM UA_FOLDER
+START WITH PARENTFOLDERID IS NULL
+CONNECT BY PRIOR_FOLDERID = PARENTFOLDERID
+(START WITH, CONNECT BY) => 하이라키 계층형 구조를 보여주는 쿼리문
+SYS_CONNECT_BY_PATH(column, char) => 계층형 쿼리로 쓸 칼럼과 구분자(char)를 넣는다고 보면 됨
+ 
